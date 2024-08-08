@@ -5,7 +5,6 @@ import SearchBarr from '@/components/SearchBarr.vue';
 <template>
 
     <SearchBarr />
-    <h1>Hola</h1>
 </template>
 
 <style></style>

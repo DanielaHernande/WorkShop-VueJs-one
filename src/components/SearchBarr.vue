@@ -49,10 +49,10 @@ const onSearch = () => {
 
   .search-icon {
     position: absolute;
-    left: 7rem; // Ajusta la posición del ícono
+    left: 7rem; 
     font-size: 1rem;
     color: #aaa;
-    pointer-events: none; // Asegura que el ícono no interfiera con el input
+    pointer-events: none;
   }
 }
 </style>
