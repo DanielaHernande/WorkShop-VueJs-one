@@ -19,7 +19,7 @@ const onSearch = () => {
 </script>
 
 <template>
-    <div class="search-bar mt-2">
+    <div class="search-bar mt-3">
         <i class="fa-solid fa-magnifying-glass search-icon"></i>
         <input type="text" placeholder="Search" v-model="search" @input="onSearch"> 
     </div>
