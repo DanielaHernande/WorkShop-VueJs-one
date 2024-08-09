@@ -4,6 +4,7 @@ import PerfileComponent from "@/components/general/PerfileComponent.vue";
 import TabsComponent from "@/components/general/TabsComponent.vue";
 import AboutComponent from "@/components/page-specific/About/AboutComponent.vue";
 import ActivityTimeline from "@/components/page-specific/About/ActivityTimeline.vue";
+import OverviewComponent from "@/components/page-specific/About/OverviewComponent.vue";
 
 </script>
 
@@ -16,6 +17,8 @@ import ActivityTimeline from "@/components/page-specific/About/ActivityTimeline.
     <AboutComponent />
     <ActivityTimeline />
   </div>
+
+  <OverviewComponent />
 </template>
 
 <style lang="scss" scoped>
