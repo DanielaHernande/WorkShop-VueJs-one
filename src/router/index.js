@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Perfile from '@/views/Perfile.vue'
+import Home from '../views/Home.vue'
 
 
 const router = createRouter({
@@ -12,11 +12,11 @@ const router = createRouter({
     },*/
     {
       path: '/',
-      name: 'perfile',
+      name: 'home',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/Perfile.vue')
+      component: () => import('../views/Home.vue')
     }
   ]
 })

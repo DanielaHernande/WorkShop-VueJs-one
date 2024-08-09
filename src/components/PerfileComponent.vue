@@ -2,7 +2,6 @@
 
 // Imports
 import { ref } from 'vue';
-import SearchBarr from '@/components/SearchBarr.vue';
 
 // Image of backgroun
 const fondoImg =  ref('public/img/fondo.jpg');
@@ -21,7 +20,6 @@ const joinedDate = ref('Joined April 2021')
 </script>
 
 <template>
-    <SearchBarr />
 
     <div class="profile-card mt-4">
         <div class="profile-header">
@@ -30,7 +28,7 @@ const joinedDate = ref('Joined April 2021')
 
         <div class="profile-detall">
             <img class="avatar" :src="avatar" alt="avatra">
-            <div class="info">
+            <div class="info fw-bold">
                 <h2>{{ name }}</h2>
                 <div class="detalles">
                     <span class="role"> <i class="fa-solid fa-palette"></i> {{ role }}</span>
