@@ -1,17 +1,27 @@
 <script setup>
-import SearchBarr from '@/components/SearchBarr.vue';
-import PerfileComponent from '@/components/PerfileComponent.vue';
-import TabsComponent from '@/components/TabsComponent.vue';
-import AboutComponent from '@/components/AboutComponent.vue';
+import SearchBarr from "@/components/general/SearchBarr.vue";
+import PerfileComponent from "@/components/general/PerfileComponent.vue";
+import TabsComponent from "@/components/general/TabsComponent.vue";
+import AboutComponent from "@/components/page-specific/About/AboutComponent.vue";
+import ActivityTimeline from "@/components/page-specific/About/ActivityTimeline.vue";
 
 </script>
 
 <template>
-    <SearchBarr />
-    <PerfileComponent />
-    <TabsComponent />
+  <SearchBarr />
+  <PerfileComponent />
+  <TabsComponent />
 
+  <div class="dashboard">
     <AboutComponent />
+    <ActivityTimeline />
+  </div>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr; 
+
+}
+</style>

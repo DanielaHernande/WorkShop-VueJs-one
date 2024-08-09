@@ -37,6 +37,7 @@
 .about-card {
 
     width: 400px;
+    height: 450px;
     margin-left: 1.5rem;
     padding: 1rem;
     background-color: #fff;
