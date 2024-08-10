@@ -15,6 +15,7 @@
 
 .section {
     width: 400px;
+    height: 140px;
     padding: 1rem;
     margin-left: 1.5rem;
     margin-bottom: 1rem;

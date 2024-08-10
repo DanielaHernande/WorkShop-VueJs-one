@@ -1,30 +1,16 @@
 <script setup>
 import SearchBarr from "@/components/general/SearchBarr.vue";
-import PerfileComponent from "@/components/general/PerfileComponent.vue";
+import CardComponent from "@/components/general/CardComponent.vue";
 import TabsComponent from "@/components/general/TabsComponent.vue";
-import AboutComponent from "@/components/page-specific/About/AboutComponent.vue";
-import ActivityTimeline from "@/components/page-specific/About/ActivityTimeline.vue";
-import OverviewComponent from "@/components/page-specific/About/OverviewComponent.vue";
-
+import PerfileComponent from "@/components/page-specific/About/PerfileComponent.vue";
 </script>
 
 <template>
   <SearchBarr />
-  <PerfileComponent />
+  <CardComponent />
   <TabsComponent />
 
-  <div class="dashboard">
-    <AboutComponent />
-    <ActivityTimeline />
-  </div>
-
-  <OverviewComponent />
+  <PerfileComponent />
 </template>
 
-<style lang="scss" scoped>
-.dashboard {
-  display: grid;
-  grid-template-columns: 1fr 2fr; 
-
-}
-</style>
+<style lang="scss" scoped></style>
