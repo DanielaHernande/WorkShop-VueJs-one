@@ -1,6 +1,6 @@
 <script setup>
 // Imports
-import { getTeams } from '@/services/apiTeams';
+import { getTeams } from '@/services/apisAbout/apiTeams';
 
 const teams = getTeams();
 

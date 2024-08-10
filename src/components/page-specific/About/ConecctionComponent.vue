@@ -1,7 +1,7 @@
 <script setup>
 // Imports
 import { ref, reactive } from 'vue';
-import { getUsers } from '@/services/apiUsers';
+import { getUsers } from '@/services/apisAbout/apiUsers';
 
 const users = reactive(getUsers());
 

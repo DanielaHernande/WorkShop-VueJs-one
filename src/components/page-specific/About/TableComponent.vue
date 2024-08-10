@@ -1,7 +1,7 @@
 <script setup>
 // Imports
 import { ref, computed, onMounted } from "vue";
-import { getProjects } from "@/services/apiPojects";
+import { getProjects } from "@/services/apisAbout/apiPojects";
 
 // Estados
 const projects = ref([]);
