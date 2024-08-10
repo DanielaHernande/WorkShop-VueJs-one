@@ -68,7 +68,7 @@
 .timeline {
 
   max-height: 400px;
-  max-width: 870px;
+  max-width: 965px;
   background-color: #fff;
   padding: 1rem;
   border-radius: 8px;

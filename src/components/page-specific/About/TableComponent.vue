@@ -130,7 +130,7 @@ const nextPage = () => {
 
 <style lang="scss" scoped>
 .project-table {
-  width: 870px;
+  width: 970px;
   height: 490px;
   padding: 1rem;
   border-radius: 8px;

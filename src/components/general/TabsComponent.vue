@@ -56,8 +56,10 @@ const currentTab = computed(() => {
 <style lang="scss" scoped>
 .tabs {
   gap: 1rem;
+  width: 90%;
   padding: 2rem;
   display: flex;
+  margin-left: 50px;
 
   .tab-boton {
     gap: 0.5rem;

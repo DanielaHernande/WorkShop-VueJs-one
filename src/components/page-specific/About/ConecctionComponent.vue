@@ -37,7 +37,7 @@ const toggleIcon = (index) => {
 
 .conecction {
 
-    width: 410px;
+    width: 450px;
     height: 440px;
     padding: 1rem;
     border-radius: 8px;

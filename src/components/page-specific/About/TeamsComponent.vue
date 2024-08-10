@@ -25,7 +25,7 @@ const teams = getTeams();
 
 .teams {
 
-    width: 418px;
+    width: 450px;
     height: 440px;
     background-color: #fff;
     padding: 1rem;

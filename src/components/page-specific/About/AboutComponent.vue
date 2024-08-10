@@ -38,7 +38,7 @@
 
     width: 400px;
     height: 450px;
-    margin-left: 1.5rem;
+    margin-left: 75px;
     padding: 1rem;
     background-color: #fff;
     border-radius: 0.5rem;

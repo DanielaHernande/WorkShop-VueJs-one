@@ -45,7 +45,7 @@ const joinedDate = ref('Joined April 2021')
 
 .profile-card {
 
-    width: 96%;
+    width: 90%;
     //height: 295px;
     margin: auto;
     border-radius: 0.50rem;

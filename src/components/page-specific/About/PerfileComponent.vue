@@ -37,13 +37,13 @@ import TableComponent from "./TableComponent.vue";
 }
 
 .bottom-section {
-  gap: 1.6rem;
+  gap: 1rem;
   top: -49px;
-  margin-right: 25px;
+  margin-right: 110px;
   position: relative;
   display: grid;
   justify-items: end;
-  grid-template-columns: 2fr 4fr 8fr; 
+  grid-template-columns: 3fr 8fr 7fr; 
 }
 
 .project {
@@ -51,7 +51,7 @@ import TableComponent from "./TableComponent.vue";
   position: relative;
   margin-bottom: 20px;
   display: grid;
-  margin-right: 25px;
+  margin-right: 205px;
   justify-content: end;
 }
 </style>
