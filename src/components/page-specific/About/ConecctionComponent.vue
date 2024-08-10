@@ -37,18 +37,18 @@ const toggleIcon = (index) => {
 
 .conecction {
 
-    width: 400px;
-    height: 400px;
-    background-color: #fff;
+    width: 410px;
+    height: 440px;
     padding: 1rem;
     border-radius: 8px;
+    background-color: #fff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
 
     h3 {
         font-size: 16PX;
         color: #797878;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .connection-item {
@@ -110,6 +110,7 @@ const toggleIcon = (index) => {
 }
 
 .view {
+    margin-top: 2rem;
     font-weight: bold;
     display: block;
     text-align: center;

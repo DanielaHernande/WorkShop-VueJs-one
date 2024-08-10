@@ -17,6 +17,7 @@
     width: 400px;
     height: 140px;
     padding: 1rem;
+    margin-top: 50px;
     margin-left: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 0.5rem;
