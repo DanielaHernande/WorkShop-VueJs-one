@@ -51,7 +51,7 @@ import TableComponent from "./TableComponent.vue";
   position: relative;
   margin-bottom: 20px;
   display: grid;
-  margin-right: 205px;
+  margin-right: 90px;
   justify-content: end;
 }
 </style>

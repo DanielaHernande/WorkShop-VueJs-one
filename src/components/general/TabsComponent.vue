@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed } from "vue";
+import PerfileComponent from "@/components/page-specific/About/PerfileComponent.vue";
+import CardTeamComponent from "@/components/page-specific/Team/CardTeamComponent.vue";
 
 const tabs = ref([
   { name: "Profile", label: "Profile", icon: "fas fa-user" },
@@ -16,12 +18,12 @@ const selectTab = (tabName) => {
 
 // Para que se active el boton y muetre el contenido del componente seleccionado
 const currentTab = computed(() => {
-  switch (selectTab.value) {
+  switch (activeTab.value) {
     case "Profile":
-      return "ProfileComponent";
+      return PerfileComponent;
 
     case "Team":
-      return "TeamComponent";
+      return CardTeamComponent;
 
     case "Projects":
       return "ProjectsComponent";

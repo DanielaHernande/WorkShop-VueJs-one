@@ -10,10 +10,6 @@ import CardTeamComponent from "@/components/page-specific/Team/CardTeamComponent
   <SearchBarr />
   <CardComponent />
   <TabsComponent />
-
-  <PerfileComponent />
-
-  <CardTeamComponent />
 </template>
 
 <style lang="scss" scoped></style>
