@@ -226,7 +226,7 @@ const nextPage = () => {
 
       .progress {
         height: 100%;
-        background-color: #6f42c1;
+        background-color: #7367EF;
       }
     }
 
@@ -255,7 +255,7 @@ const nextPage = () => {
       height: 40px;
       font-weight: 700;
       font-size: 1rem;
-      color: #6f42c1;
+      color: #7367EF;
       padding: 0.5rem 1rem;
       background-color: rgb(233, 233, 233);
       border: 1px solid rgb(233, 233, 233);
@@ -263,12 +263,12 @@ const nextPage = () => {
 
       &.active {
         color: #fff;
-        background-color: #6f42c1;
+        background-color: #7367EF;
       }
 
       &:hover {
         color: #fff;
-        background-color: #6f42c1;
+        background-color: #7367EF;
       }
     }
   }

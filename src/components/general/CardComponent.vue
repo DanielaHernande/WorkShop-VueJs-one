@@ -42,6 +42,7 @@ const joinedDate = ref('Joined April 2021')
 </template>
 
 <style lang="scss" scoped>
+@import '/src/assets/style.css';
 
 .profile-card {
 
@@ -104,7 +105,7 @@ const joinedDate = ref('Joined April 2021')
 
     width: 150px;
     height: 40px;
-    background-color: #6e50f7;
+    background-color: #7367EF;
     border-radius: 6px;
     color: white;
     border: none;
@@ -117,6 +118,7 @@ const joinedDate = ref('Joined April 2021')
     }
 
     &:hover {
+        transition: ease-out 1s;
         background-color: #4d29ee;
     }
 }

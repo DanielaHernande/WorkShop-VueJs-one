@@ -165,20 +165,20 @@ const toggleIcon = (index) => {
     gap: 5px;
     border: none;
     display: flex;
-    color: #5945a5;
+    color: #7367EF;
     padding: 8px 15px;
     border-radius: 8px;
     align-items: center;
     background-color: #c8c4eb;
 
     i {
-      color: #6c5ce7;
+      color: #7367EF;
       font-size: 14px;
     }
 
     &.active {
       color: #fff;
-      background-color: #6c5ce7;
+      background-color: #7367EF;
 
       i {
         color: white;
@@ -188,7 +188,7 @@ const toggleIcon = (index) => {
     &:hover {
       color: #fff;
       transition: ease 0.4s;
-      background-color: #6c5ce7;
+      background-color: #7367EF;
 
       i {
         color: white;

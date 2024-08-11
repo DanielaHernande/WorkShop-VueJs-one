@@ -78,12 +78,12 @@ const currentTab = computed(() => {
 
     &.active {
       color: #fff;
-      background-color: #6f42c1;
+      background-color: #7367EF;
     }
 
     &:hover {
       color: #fff;
-      background-color: #6f42c1;
+      background-color: #7367EF;
     }
 
     i {

@@ -194,7 +194,7 @@ const infoProjects = ref(getProjects());
   .progress {
     height: 100%;
     border-radius: 5px;
-    background: #34c38f;
+    background: #7367EF;
   }
 
   .progress-text {

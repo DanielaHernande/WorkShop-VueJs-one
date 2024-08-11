@@ -132,7 +132,7 @@ const teams = getTeams();
     font-weight: bold;
     display: block;
     text-align: center;
-    color: #6c5ce7;
+    color: #7367EF;
     text-decoration: none;
 }
 </style>
