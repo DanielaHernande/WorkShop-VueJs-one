@@ -3,6 +3,7 @@ import { ref, computed } from "vue";
 import PerfileComponent from "@/components/page-specific/About/PerfileComponent.vue";
 import CardTeamComponent from "@/components/page-specific/Team/CardTeamComponent.vue";
 import PerfileCardComponent from '@/components/page-specific/Connections/PerfileCardComponent.vue'
+import CardProjectComponent from '@/components/page-specific/Projects/CardProjectComponent.vue'
 
 const tabs = ref([
   { name: "Profile", label: "Profile", icon: "fas fa-user" },
@@ -27,7 +28,7 @@ const currentTab = computed(() => {
       return CardTeamComponent;
 
     case "Projects":
-      return" PerfileCardComponent";
+      return CardProjectComponent;
 
     case "Connections":
       return PerfileCardComponent;
