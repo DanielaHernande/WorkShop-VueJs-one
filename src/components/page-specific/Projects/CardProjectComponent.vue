@@ -1,13 +1,28 @@
 <script setup>
+// Imports
 import { ref } from "vue";
 import { getProjects } from "@/services/apiProjects/apiProjects.js";
+import { getTagColor } from '@/services/apiProjects/apiTagColors.js'
 
+// State: List of projects
 const infoProjects = ref(getProjects());
+
+// State: Tag color styles
+const tagStyles = getTagColor();
+
+// Function to get the style for a specific tag
+const getTagStyle = (tag) => {
+  return tagStyles[tag] || { color: "#333", backgroundColor: "#f0f0f0" };
+};
+
 </script>
 
 <template>
   <div class="project-grid">
+    <!-- Iterate through the projects and display each project card -->
     <div v-for="project in infoProjects" :key="project.id" class="project-card">
+
+      <!-- Project header with icon, title, client name, and options -->
       <div class="project-header">
         <img :src="project.icon" :alt="project.name" />
         <div class="project-info">
@@ -17,6 +32,7 @@ const infoProjects = ref(getProjects());
         <div class="more-options">⋮</div>
       </div>
 
+      <!-- Project details including budget, start date, and deadline -->
       <div class="details-date">
         <div class="budget">
           <p class="fw-bold">{{ project.budget }}</p>
@@ -29,21 +45,25 @@ const infoProjects = ref(getProjects());
         </div>
       </div>
 
+      <!-- Project description -->
       <p class="description">{{ project.description }}</p>
 
+      <!-- Project hours logged, total hours, and days left -->
       <div class="info-hours">
         <p class="par">
           <strong>All Hours:</strong> {{ project.hoursLogged }} /
           {{ project.hoursTotal }}
         </p>
-        <div class="days-left">{{ project.daysLeft }} Days left</div>
+        <div :style="getTagStyle(project.daysLeft)" class="days-left">{{ project.daysLeft }} Days left</div>
       </div>
 
+      <!-- Progress bar displaying the progress of the project -->
       <div class="progress-bar">
         <span class="progress-text">{{ project.progress }}% Completed</span>
         <div class="progress" :style="{ width: project.progress + '%' }"></div>
       </div>
 
+      
       <div class="footer">
         <div class="avatars">
           <img
@@ -66,11 +86,11 @@ const infoProjects = ref(getProjects());
 <style lang="scss" scoped>
 .project-grid {
   gap: 1rem;
-  width: 95%;
-  margin-left: 48px;
+  width: 90%;
+  margin-left: 85px;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
 
   .project-card {
     padding: 1.6rem;
@@ -174,10 +194,9 @@ const infoProjects = ref(getProjects());
     }
 
     .days-left {
-      background: #e8f7e9;
-      color: #34c38f;
+      font-weight: 600;
       padding: 5px 10px;
-      border-radius: 20px;
+      border-radius: 8px;
       font-size: 0.8em;
     }
   }
@@ -194,7 +213,7 @@ const infoProjects = ref(getProjects());
   .progress {
     height: 100%;
     border-radius: 5px;
-    background: #7367EF;
+    background: #7367ef;
   }
 
   .progress-text {
@@ -226,14 +245,12 @@ const infoProjects = ref(getProjects());
   .member {
     color: #888;
     margin-top: 11px;
-    margin-right: 100px;
     font-size: 0.8em;
   }
 
   .comments {
     font-size: 1em;
     color: #888;
-    cursor: pointer;
   }
 }
 </style>

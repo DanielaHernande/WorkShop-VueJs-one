@@ -79,7 +79,7 @@ export const getProjects = () => {
           "Your domain name should reflect your products or services so that your...",
         hoursLogged: 880,
         hoursTotal: 820,
-        daysLeft: 126 ,
+        daysLeft: 28 ,
         progress: 72,
         avatars: [
           "public/img/avatar1.jpg",

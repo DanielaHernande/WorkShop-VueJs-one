@@ -1,16 +1,21 @@
 <script setup>
+// Imports
 import { ref } from "vue";
 import { getPerfiles } from "@/services/apiConecction/apiPerfile.js";
 import { getColorsConnection } from "@/services/apiConecction/tagColorConnection";
 
+// State: List of profiles
 const perfiles = ref(getPerfiles());
 
+// State: Tag color styles
 const tagStyles = getColorsConnection();
 
+// Function to get the style for a specific tag
 const getTagStyle = (tag) => {
   return tagStyles[tag] || { color: "#333", backgroundColor: "#f0f0f0" };
 };
 
+// Function to toggle the icon between 'user-plus' and 'user-check'
 const toggleIcon = (index) => {
   perfiles.value[index].icon =
     perfiles.value[index].icon === "fa-solid fa-user-plus"
@@ -21,25 +26,29 @@ const toggleIcon = (index) => {
 
 <template>
   <div class="profiles-grid">
+    <!-- Iterate through the profiles and display each profile card -->
     <div
       v-for="(perfil, index) in perfiles"
       :key="perfil.name"
       class="profile-card"
     >
+      <!-- Profile header with avatar, name, and charge -->
       <div class="profile-header">
         <img :src="perfil.avatar" :alt="perfil.name" class="profile-avatar" />
         <h2 class="perfile-name">{{ perfil.name }}</h2>
         <p class="profile-charge">{{ perfil.charge }}</p>
       </div>
+      <!-- Profile skills with dynamic tag styles -->
       <div class="profile-skill">
         <span
           v-for="skill in perfil.skills"
-          :key="perfil.skill"
+          :key="skill"
           :style="getTagStyle(skill)"
-          class="skill"
+          class="skill fw-bold"
           >{{ skill }}</span
         >
       </div>
+      <!-- Profile statistics including projects, tasks, and connections -->
       <div class="profile-statistics">
         <div class="statistic">
           <span class="statistic-value">{{ perfil.statistics.projects }}</span>
@@ -56,12 +65,14 @@ const toggleIcon = (index) => {
           <span class="statistic-label">Connections</span>
         </div>
       </div>
+      
+      <!-- Profile actions with toggle and message buttons -->
       <div class="profile-actions">
         <button
           @click="toggleIcon(index)"
           :class="[
             'btn-conexion ms-4 fw-bold',
-            { active: perfil.icon === 'fa-solid fa-user-plus' },
+            { active: perfil.icon === 'fa-solid fa-user-check' },
           ]"
         >
           <i :class="['me-2', perfil.icon]"></i>Connected
@@ -107,12 +118,14 @@ const toggleIcon = (index) => {
 
 .perfile-name {
   font-size: 20px;
+  color: #5c5c5c;
   font-weight: bold;
   margin-bottom: 5px;
 }
 
 .profile-charge {
-  color: #666;
+  color: #7e7e7e;
+  font-weight: 500;
   font-size: 14px;
   margin-bottom: 15px;
 }
@@ -134,6 +147,7 @@ const toggleIcon = (index) => {
 }
 
 .profile-statistics {
+  
   display: flex;
   margin-bottom: 20px;
   justify-content: space-around;
@@ -144,7 +158,7 @@ const toggleIcon = (index) => {
     flex-direction: column;
 
     .statistic-value {
-      color: #424242;
+      color: #5c5c5c;
       font-size: 18px;
       margin-bottom: 5px;
       font-weight: bold;
@@ -152,6 +166,7 @@ const toggleIcon = (index) => {
 
     .statistic-label {
       color: #666;
+      font-weight: 500;
       font-size: 12px;
     }
   }
@@ -165,20 +180,20 @@ const toggleIcon = (index) => {
     gap: 5px;
     border: none;
     display: flex;
-    color: #7367EF;
+    color: #7367ef;
     padding: 8px 15px;
     border-radius: 8px;
     align-items: center;
     background-color: #c8c4eb;
 
     i {
-      color: #7367EF;
+      color: #7367ef;
       font-size: 14px;
     }
 
     &.active {
       color: #fff;
-      background-color: #7367EF;
+      background-color: #7367ef;
 
       i {
         color: white;
@@ -188,7 +203,7 @@ const toggleIcon = (index) => {
     &:hover {
       color: #fff;
       transition: ease 0.4s;
-      background-color: #7367EF;
+      background-color: #7367ef;
 
       i {
         color: white;

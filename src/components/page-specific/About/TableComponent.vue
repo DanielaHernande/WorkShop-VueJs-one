@@ -3,20 +3,20 @@
 import { ref, computed, onMounted } from "vue";
 import { getProjects } from "@/services/apisAbout/apiPojects";
 
-// Estados
+// States
 const projects = ref([]);
 const searchQuery = ref("");
 const currentPage = ref(1);
 const itemsPerPage = 5;
 
-// Cargar los proyectos de manera asíncrona
+// Load projects asynchronously when the component is mounted
 onMounted(async () => {
   const response = await getProjects();
-  projects.value = response; // Asume que la respuesta es un array de proyectos
+  projects.value = response;
 });
 
+// Computed property to filter projects based on the search query and pagination
 const filteredProjects = computed(() => {
-  // Verificar si projects.value es definido antes de intentar usarlo
   if (!projects.value) return [];
 
   const filtered = projects.value.filter((project) =>
@@ -26,21 +26,25 @@ const filteredProjects = computed(() => {
   return filtered.slice(startIndex, startIndex + itemsPerPage);
 });
 
+// Computed property to determine the total number of pages based on the number of projects
 const totalPages = computed(() => {
   if (!projects.value) return 1;
   return Math.ceil(projects.value.length / itemsPerPage);
 });
 
+// Function to change the current page
 const changePage = (page) => {
   currentPage.value = page;
 };
 
+// Function to go to the previous page
 const previousPage = () => {
   if (currentPage.value > 1) {
     currentPage.value--;
   }
 };
 
+// Function to go to the next page
 const nextPage = () => {
   if (currentPage.value < totalPages.value) {
     currentPage.value++;
@@ -52,12 +56,13 @@ const nextPage = () => {
   <div class="project-table">
     <div class="table-header">
       <h3>Project List</h3>
+      <!-- Search input to filter projects -->
       <input type="text" v-model="searchQuery" placeholder="Search Project" />
     </div>
 
     <table>
       <thead>
-        <tr>
+        <tr class="border-top">
           <th><input type="checkbox" /></th>
           <th>Project</th>
           <th>Leader</th>
@@ -67,10 +72,12 @@ const nextPage = () => {
         </tr>
       </thead>
       <tbody>
+        <!-- Loop through filtered projects and display each one in a table row -->
         <tr v-for="project in filteredProjects" :key="project.id">
           <td><input type="checkbox" /></td>
           <td>
             <div class="project-info">
+              <!-- Display project icon and name -->
               <img
                 :src="project.icon"
                 :alt="project.name"
@@ -85,6 +92,7 @@ const nextPage = () => {
           <td>{{ project.leader }}</td>
           <td>
             <div class="team">
+              <!-- Loop through team members and display their avatars -->
               <img
                 v-for="(member, index) in project.team"
                 :key="index"
@@ -92,6 +100,7 @@ const nextPage = () => {
                 :alt="member.name"
                 class="team-avatar"
               />
+              <!-- Display additional team members if there are any -->
               <span v-if="project.extraTeamMembers"
                 >+{{ project.extraTeamMembers }}</span
               >
@@ -99,14 +108,17 @@ const nextPage = () => {
           </td>
           <td>
             <div class="progress-bar">
+              <!-- Display progress as a percentage width of the progress bar -->
               <div
                 class="progress"
                 :style="{ width: project.progress + '%' }"
               ></div>
             </div>
+            <!-- Display progress percentage -->
             <div class="progress-percentage">{{ project.progress }}%</div>
           </td>
           <td>
+            <!-- Button for actions related to the project -->
             <button class="action-button">...</button>
           </td>
         </tr>
@@ -114,6 +126,7 @@ const nextPage = () => {
     </table>
 
     <div class="pagination">
+      <!-- Buttons to navigate between pages -->
       <button @click="previousPage">«</button>
       <button
         v-for="page in totalPages"
@@ -141,19 +154,26 @@ const nextPage = () => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 
     h3 {
       margin: 0;
       font-weight: 600;
-      font-size: 1.5rem;
+      font-size: 16px;
+      color: #797878;
     }
 
     input {
-      height: 38px;
-      width: 200px;
+      height: 34px;
+      width: 250px;
       border-radius: 4px;
       padding: 0.5rem;
       border: 1px solid #ccc;
+
+      &:placeholder-shown {
+        font-size: 12px;
+        font-weight: 300;
+      }
     }
   }
 
@@ -201,18 +221,21 @@ const nextPage = () => {
       align-items: center;
 
       .team-avatar {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         border-radius: 50%;
+        margin-right: -10px;
+        border: 2px solid #fff;
       }
 
       span {
-        width: 24px;
-        height: 24px;
+        width: 28px;
+        height: 28px;
         color: #555;
         font-weight: 700;
         border-radius: 50%;
         text-align: center;
+        border: 2px solid #fff;
         background-color: rgb(207, 207, 209);
       }
     }
@@ -226,7 +249,7 @@ const nextPage = () => {
 
       .progress {
         height: 100%;
-        background-color: #7367EF;
+        background-color: #7367ef;
       }
     }
 
@@ -255,7 +278,7 @@ const nextPage = () => {
       height: 40px;
       font-weight: 700;
       font-size: 1rem;
-      color: #7367EF;
+      color: #7367ef;
       padding: 0.5rem 1rem;
       background-color: rgb(233, 233, 233);
       border: 1px solid rgb(233, 233, 233);
@@ -263,12 +286,12 @@ const nextPage = () => {
 
       &.active {
         color: #fff;
-        background-color: #7367EF;
+        background-color: #7367ef;
       }
 
       &:hover {
         color: #fff;
-        background-color: #7367EF;
+        background-color: #7367ef;
       }
     }
   }

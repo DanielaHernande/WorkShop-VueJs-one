@@ -11,7 +11,7 @@ export const getPerfiles = () => {
         connections: "129",
       },
       skills: ["Figma", "Sketch"],
-      icon: "fa-solid fa-user-plus"
+      icon: "fa-solid fa-user-check"
     },
 
     {
