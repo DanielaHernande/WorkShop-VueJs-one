@@ -4,7 +4,7 @@ export const getPerfiles = () => {
       id: 1,
       name: "Mark Gilbert",
       charge: "UI Designer",
-      avatar: "/public/img/avatar.jpg",
+      avatar: "/public/img/a.jpg",
       statistics: {
         projects: 18,
         tasks: 834,
@@ -46,7 +46,7 @@ export const getPerfiles = () => {
         id: 4,
         name: "Leon Lucas",
         charge: "UI/UX Designer",
-        avatar: "/public/img/avatar1.jpg",
+        avatar: "/public/img/p.jpg",
         statistics: {
           projects: 86,
           tasks: "12.4k",
@@ -60,7 +60,7 @@ export const getPerfiles = () => {
         id: 5,
         name: "Jayden Rogers",
         charge: "Full Stack Developer",
-        avatar: "/public/img/avatar1.jpg",
+        avatar: "/public/img/c.jpg",
         statistics: {
           projects: 244,
           tasks: "23.8k",
@@ -74,7 +74,7 @@ export const getPerfiles = () => {
         id: 6,
         name: "Jeanette Powell",
         charge: "SEO",
-        avatar: "/public/img/avatar1.jpg",
+        avatar: "/public/img/b.jpg",
         statistics: {
           projects: 32,
           tasks: "1.28k",

@@ -8,8 +8,8 @@ export const getProjects = () => {
       icon: "/public/img/react.png",
       leader: "Eileen",
       team: [
-        { name: "Member 1", avatar: "/public/img/avatar.jpg"},
-        { name: "Member 2", avatar: "/public/img/avatar.jpg" },
+        { name: "Member 1", avatar: "/public/img/a.jpg"},
+        { name: "Member 2", avatar: "/public/img/b.jpg" },
         { name: "Member 3", avatar: "/public/img/avatar1.jpg" },
       ],
       extraTeamMembers: 3,
@@ -37,9 +37,9 @@ export const getProjects = () => {
       icon: "/public/img/vue-js.png",
       leader: "Keith",
       team: [
-        { name: "Member 1", avatar: "/public/img/avatar.jpg"},
-        { name: "Member 2", avatar: "/public/img/avatar.jpg" },
-        { name: "Member 2", avatar: "/public/img/avatar.jpg" },
+        { name: "Member 1", avatar: "/public/img/p.jpg"},
+        { name: "Member 2", avatar: "/public/img/c.jpg" },
+        { name: "Member 2", avatar: "/public/img/b.jpg" },
       ],
       extraTeamMembers: 0,
       progress: 62,
@@ -68,7 +68,7 @@ export const getProjects = () => {
       leader: "Harmonia",
       team: [
         { name: "Member 1", avatar: "/public/img/avatar.jpg"},
-        { name: "Member 2", avatar: "/public/img/avatar.jpg" },
+        { name: "Member 2", avatar: "/public/img/avatar2.jpg" },
       ],
       extraTeamMembers: 5,
       progress: 51,

@@ -42,7 +42,7 @@
 
             <!-- Avatar and details of the client -->
             <div class="avatar-contenedor">
-              <img src="/public/img/avatar.jpg" alt="avatar" class="me-2" />
+              <img src="/public/img/b.jpg" alt="avatar" class="me-2" />
 
               <div>
                 <p><strong>Lester McCarthy (Client)</strong></p>
@@ -69,9 +69,9 @@
 
             <!-- Avatars of team members involved in the project -->
             <div class="avatar-contenedor">
-              <img src="/public/img/avatar.jpg" alt="avatar1" />
-              <img src="/public/img/avatar.jpg" alt="avatar2" />
-              <img src="/public/img/avatar.jpg" alt="avatar3" />
+              <img src="/public/img/avatar1.jpg" alt="avatar1" />
+              <img src="/public/img/avatar2.jpg" alt="avatar2" />
+              <img src="/public/img/a.jpg" alt="avatar3" />
               <span class="additional-members fw-bold">+3</span>
             </div>
           </div>
